@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.regis"
+        Title="regis">
+    <StackPanel>
+        <Button Name="Back" Content="Back" Click="Back_OnClick"></Button>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="Add" Content="Add" Click="Add_OnClick"></Button>
+        </StackPanel>
+        <StackPanel>
+            <TextBox Name="text1" Watermark="id"></TextBox>
+            <TextBox Name="text2" Watermark="name"></TextBox>
+            <TextBox Name="text3" Watermark="last_name"></TextBox>
+            <TextBox Name="text4" Watermark="phone"></TextBox>
+            <MaskedTextBox Name="text5" Mask="00/00/0000"></MaskedTextBox>
+        </StackPanel>
+    </StackPanel>
+</Window>

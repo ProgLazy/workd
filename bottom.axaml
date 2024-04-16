@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.bottom"
+        Title="bottom">
+    <StackPanel>
+        <Button Name="Back" Content="Back To Autorization" Click="Back_OnClick"></Button>
+        <StackPanel>
+            <DataGrid Name="Grid" x:CompileBindings="False" Height="240">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="id" Binding="{Binding id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="name" Binding="{Binding name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="last_name" Binding="{Binding last_name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="phone" Binding="{Binding phone}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="year" Binding="{Binding year}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Search</TextBlock>
+            <TextBox Name="search" TextChanged="Search_OnTextChanged" Width="240"></TextBox>
+            
+            <ComboBox Name="Box" SelectionChanged="Box_OnSelectionChanged" x:CompileBindings="False">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding name}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+           
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="Add" Content="Add" Click="Add_OnClick"></Button>
+            <Button Name="Update" Content="Update" Click="Update_OnClick"></Button>
+            <Button Name="Delete" Content="Delete" Click="Delete_OnClick"></Button>
+            <Button Name="Save" Content="Save" Click="Save_OnClick"></Button>
+            <Button Name="A_Z" Content="A-Z" Click="A_Z_OnClick"></Button>
+        </StackPanel>
+        <StackPanel>
+            <TextBox Name="text1" Watermark="id"></TextBox>
+            <TextBox Name="text2" Watermark="name"></TextBox>
+            <TextBox Name="text3" Watermark="last_name"></TextBox>
+            <TextBox Name="text4" Watermark="phone"></TextBox>
+            <MaskedTextBox Name="text5" Mask="00/00/0000"></MaskedTextBox>
+        </StackPanel>
+    </StackPanel>
+</Window>

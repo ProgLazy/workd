@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.MainWindow"
+        Title="AvaloniaApplication1">
+    <StackPanel>
+        <StackPanel>
+            <TextBlock>Введите логин</TextBlock>
+            <TextBox Name="login" ></TextBox>
+        
+            <TextBlock>Введите пароль</TextBlock>
+            <TextBox Name="password"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <Button Name="Enter" Content="Enter To System" Click="Enter_OnClick"></Button>
+            <Button Name="Register" Content="Registration" Click="Register_OnClick"></Button>
+        </StackPanel>
+    </StackPanel>
+    
+    
+</Window>
