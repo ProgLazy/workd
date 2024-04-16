@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.bottom"
+        Icon="Assets/123.jpeg"
         Title="bottom">
     <StackPanel>
         <Button Name="Back" Content="Back To Autorization" Click="Back_OnClick"></Button>

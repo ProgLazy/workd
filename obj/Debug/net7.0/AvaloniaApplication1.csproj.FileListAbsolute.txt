@@ -147,3 +147,4 @@ D:\Мои документы\Documents\Rider\AvaloniaApplication1\AvaloniaApplic
 D:\Мои документы\Documents\Rider\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net7.0\AvaloniaApplication1.csproj.CopyComplete
 D:\Мои документы\Documents\Rider\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net7.0\AvaloniaApplication1.genruntimeconfig.cache
 D:\Мои документы\Documents\Rider\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net7.0\ref\AvaloniaApplication1.dll
+D:\Мои документы\Documents\Rider\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net7.0\AvaloniaApplication1.sourcelink.json

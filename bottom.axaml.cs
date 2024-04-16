@@ -101,6 +101,7 @@ public partial class bottom : Window
         {
             _connection = new MySqlConnection(connectionString);
             _connection.Open();
+            //Запрос необходимо поменять поля таблицы и название таблицы)
             string update = "UPDATE stuff SET name = '"+text2.Text+"', last_name = '"+text3.Text+"', phone = '"+text4.Text+"', year = '"+text5.Text+"' WHERE id = '"+text1.Text+"'";
             MySqlCommand command = new MySqlCommand(update, _connection);
             command.ExecuteNonQuery();
@@ -119,6 +120,7 @@ public partial class bottom : Window
         {
             _connection = new MySqlConnection(connectionString);
             _connection.Open();
+            //Запрос необходимо поменять поля таблицы и название таблицы)
             string update = "DELETE FROM Stuff WHERE id = '"+text1.Text+"'";
             MySqlCommand command = new MySqlCommand(update, _connection);
             command.ExecuteNonQuery();
@@ -136,6 +138,7 @@ public partial class bottom : Window
         _pons = new List<users_pon>();
         _connection = new MySqlConnection(connectionString);
         _connection.Open();
+        //Запрос необходимо поменять поля таблицы и название таблицы)
         string sql = "SELECT * FROM stuff";
         MySqlCommand command = new MySqlCommand(sql, _connection);
         MySqlDataReader reader = command.ExecuteReader();
@@ -161,6 +164,7 @@ public partial class bottom : Window
         _filters = new List<filters>();
         _connection = new MySqlConnection(connectionString);
         _connection.Open();
+        //Запрос необходимо поменять поля таблицы и название таблицы) два поля только
         string sql = "SELECT id, name FROM stuff";
         MySqlCommand command = new MySqlCommand(sql, _connection);
         MySqlDataReader reader = command.ExecuteReader();
@@ -174,7 +178,7 @@ public partial class bottom : Window
             };
             _filters.Add(current);
         }
-
+        //здесь необходимо найти по имени combobox
         var combobox = this.Find<ComboBox>("Box");
         combobox.ItemsSource = _filters;
         _connection.Close();
@@ -185,7 +189,9 @@ public partial class bottom : Window
     private void Box_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
         var combobox = (ComboBox)sender;
+        //сперва указывается класс в котором поля для фильтрации
         var current = combobox.SelectedItem as filters;
+        //Лист основных даннных в котором проверяется условия 
         var filter = _pons.Where(x => x.name == current.name).ToList();
         Grid.ItemsSource = filter;
     }
@@ -198,7 +204,8 @@ public partial class bottom : Window
 
     private void A_Z_OnClick(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        string sql = "SELECT id, name, last_name, phone, year FROM stuff ORDER BY name desc";
+        ShowTable(sql);
     }
 
     private void Back_OnClick(object? sender, RoutedEventArgs e)
